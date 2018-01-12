@@ -121,7 +121,7 @@ If the web page session has been successfully established, you will see a messag
 
 There are many other useful functions available.  Review the comments in the PLL and JS files for suggests.  Some of those functions offers way to check is a connection has been establish, if the server is running, etc.  This are helpful in order to make proper programmatic decisions about what to do next.
 
-Here the demo movie : https://community.oracle.com/message/14655253#14655253
+Here the demo movie: http://www.fmatz.com/Forms-WebSocket-Demo.gif
 
 ## Known issues
 
