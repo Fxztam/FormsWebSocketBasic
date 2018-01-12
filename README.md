@@ -1,6 +1,10 @@
 # FormsWebSocketBasic
 
-The Oracle Forms 12.2.1.3 new feature 'WebSocket JS Interface' - WSJSI - allows the connection to a Web Browser WebSocket session for sending events/data or synchronous receiving data per function call.   
+The Oracle Forms 12.2.1.3 new feature 'WebSocket JS Interface' - WSJSI - allows the connection to a Web Browser WebSocket session for sending events/data or synchronous receiving data per JS function call.   
+
+### Forms test module:
+
+<img src="http://www.fmatz.com/WebSocket-demo-12-01-_2018_12-25-27.png">
 
 ## Getting Started
 
@@ -127,4 +131,4 @@ Here the demo movie: http://www.fmatz.com/Forms-WebSocket-Demo.gif
 
 ## Not implemeted
 
-
+The interaction must begin from Forms to JS, listening on JS events/data on the Forms side is not inmplemented yet.
