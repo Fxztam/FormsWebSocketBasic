@@ -115,6 +115,6 @@ Here the demo:
 
 The flow above is important, errors due to deviations from the flow must be remedied by restarting.
 
-## Not implemeted
+## Not implemented
 
 The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not implemented.
