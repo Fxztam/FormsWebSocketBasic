@@ -117,4 +117,4 @@ The flow above is important, errors due to deviations from the flow must be reme
 
 ## Not implemeted
 
-The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not inmplemented.
+The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not implemented.
