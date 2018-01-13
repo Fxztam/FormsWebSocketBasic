@@ -31,11 +31,14 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
 
 #### Environment setup goes something like this:
 
-    1. [Download jetty.jar](http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar)  (from the Deployment Guide).
+    1. Download : jetty.jarhttp://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar  (from the Deployment Guide).
     2. Properly sign the jar.
     3. Copy the jar to the /forms/java directory.
     4. Add the jar file to ARCHIVE (or extensions.jnlp if using Web Start).
     5. Add frmwebsocketjsi.jar to ARCHIVE.
+    6. Config in the formsweb.cfg:
+       * enableJavascriptEvent=true
+       * JavaScriptBlocksHeartBeat=true
 
 #### Application setup:
 
@@ -76,12 +79,7 @@ The WJSI fetures in this demo were tested on the IE11 Java plugin and the Forms 
 
 The cmd file for starting with FSAL: https://github.com/Fxztam/FormsWebSocketBasic/blob/master/start_websocket-demo.cmd
 
-Here a demo movie: http://www.fmatz.com/Forms-WebSocket-Demo.gif
-
-In order for this to work, the web page must be connected to the corresponding session.  
-This means you should not attempt to start the server and the session (in the form) then immediately attempt to do something.  
-
-In an ideal situation the expected flow would be something like this:
+Following flow was succesfully tested:
 
 1. Start the chk_websocket.fmx:
    * press 'Start Server'
@@ -89,35 +87,30 @@ In an ideal situation the expected flow would be something like this:
    * press 'Start Session'
    * press ' Session State?'
    * press 'Session ID?'
-2. If all ready here, then next: 
+2. If all ready here, then next:
 3. Open the chk-websocket.html:
    * open in the Browser 'Development Tools' 'Console'
    * press 'Connect Server' in the chk-websocket.html
    * press 'Begin Session'
-4.  The web page session is started.
-5.  Interaction via JS can begin:
-6.  In the Form select in ComboBox:
+4. The web page session is started.
+5. Interaction via JS can begin:
+6. In the Form select in ComboBox:
    * 'Alert' press 'Send JavaScript'
    * 'Check Console' press 'Send JavaScript'
    * 'Get Item' press 'Send JavaScript'
    * 'Get Date> press 'Send JavaScript'
    * 'Prompt' press 'Send JavaScript'
    * 'Set Item' press 'Send JavaScript' 
-7.  Finishing the Websocket Service from chk_websocket.fmx:
+7. Finishing the Websocket Service from chk_websocket.fmx
    * press 'Stop Session'
    * press 'Stop Server'.
 
 You can check the availability of a Websocket Port: press 'Port Check'.
 
-If the web page session has been successfully established, you will see a message in the JS console (or shell) that says something like "Connected with peer" or "Connection with peer successful."  If you do not see a similar message then the web page is not talking to the websocket server and your JS calls from/to Forms won't work.
-
-There are many other useful functions available.  Review the comments in the PLL and JS files for suggests.  Some of those functions offers way to check is a connection has been establish, if the server is running, etc.  This are helpful in order to make proper programmatic decisions about what to do next.
-
-Here the demo: 
-<img src="http://www.fmatz.com/WS-Forms-final.gif />
+Here the demo: <img src="http://www.fmatz.com/WS-Forms-final.gif" />
 
 ## Known issues
 
 ## Not implemeted
 
-The interaction must begin from Forms to JS, listening on JS events/data on the Forms side is not inmplemented yet.
+The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not inmplemented yet.
