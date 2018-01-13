@@ -107,10 +107,14 @@ Following flow was succesfully tested:
 
 You can check the availability of a Websocket Port: press 'Port Check'.
 
-Here the demo: <img src="http://www.fmatz.com/WS-Forms-final.gif" />
+Here the demo: 
+
+<img src="http://www.fmatz.com/WS-Forms-final.gif" />
 
 ## Known issues
 
+The flow above is important, errors due to deviations from the flow must be remedied by restarting.
+
 ## Not implemeted
 
-The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not inmplemented yet.
+The interaction is a one-way from Forms to JS, listening on JS events/data on the Forms side is not inmplemented.
