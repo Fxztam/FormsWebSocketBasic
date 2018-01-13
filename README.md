@@ -6,7 +6,6 @@ Websockets is a two-way extremely powerful communication protocol,
 you can find here a very good summary from Oracle: http://www.oracle.com/technetwork/cn/community/developer-day/6-java-html5websocket-app-2196804-zhs.pdf
 
 The Oracle Forms WJSI is a one-way peer to peer implementation: 
-
 Forms calls exactly one JS client point.
 
 ### Forms test module started with fsal:
@@ -16,7 +15,6 @@ Forms calls exactly one JS client point.
 ## Getting Started
 
 This Oracle Forms Demo was inspired from: 
-- http://www.oracle.com/technetwork/developer-tools/forms/documentation/oracleforms-12210-newfeatures-2906037.pdf
 - https://docs.oracle.com/middleware/12213/formsandreports/deploy-forms/oracle-forms-and-javascript-integration.htm#FSDEP242
 - https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=535584723136940&parent=DOCUMENT&sourceId=854157.1&id=853911.1&_afrWindowMode=0&_adf.ctrl-state=p5qvbw888_102
 - https://community.oracle.com/message/14655253#14655253 
@@ -67,7 +65,10 @@ END;
 
 ## Running the tests
 
-### 
+The WJSI fetures in this demo was tested on the IE11 Java plugin and the Forms Application Launcher,
+based on Java Version 1.8_151.
+
+### Test
 ### Start with Forms Application Launcher - FSAL
 
 e.g.: 
@@ -85,15 +86,11 @@ websocketJSI.StartServer(<PortNunmer>);
 
 5.  Add pl/sql code to begin a websocket session from the form.  Example:
 
- 
-
         websocketJSI.BeginSession(32767, 'mySession123');
 
  
 
 6.  In the HTML page, add a reference to the needed JS file.  The src location may need to be adjusted depending on the server where the HTML page lives. Example:
-
- 
 
           <script type="text/javascript" src="/forms/java/frmwebsocketjsi.js"></script>
 
@@ -101,15 +98,11 @@ websocketJSI.StartServer(<PortNunmer>);
 
 7.  Add JS code to connect to the websocket server from the HTML page.  Example:
 
- 
-
           frmwebsocketjsi.connectToServer(32767);
 
  
 
 8.  Add JS code to connect to the desired session from the HTML page.  Example:
-
- 
 
           frmwebsocketjsi.beginSession('mySession123');
 
@@ -129,22 +122,29 @@ Extraction of JS Code from chk-websocket.html:
 In order for this to work, the web page must be connected to the corresponding session.  This means you should not attempt to start the server and the session (in the form) then immediately attempt to do something.   In an ideal situation the expected flow would be something like this:
 
 1.  Start the chk_websocket.fmx:
-    a. press <>
-    b. press <>
-    c. press <>
-    e. is all is ready, then next here: 
+    a. press <Start Server>
+    b. press <Server State?>
+    c. press <Start Session>
+    d. press <Session State?>
+    e. press <Session ID?>
+    f. If all ready here, then next: 
 3.  Open the chk-websocket.html:
     a. open in the Browser <Development Tools> <Console>
-    a. press <>
-    b. press <>
+    a. press <Connect Server> in the chk-websocket.html
+    b. press <Begin Session>
 4.  The web page session is started.
-5.  Interaction via JS begins.
+5.  Interaction via JS can begin:
+6.  In the Form select in ComboBox:
+    a. <Alert> <Send JavaScript>
+    b. <Check Console> <Send JavaScript>
+    c. <Get Item> <Send JavaScript>
+    d. <Get Date> <Send JavaScript>
+    e. <Prompt> <Send JavaScript>
+    f. <Set Item> <Send JavaScript> .
 
 If the web page session has been successfully established, you will see a message in the JS console (or shell) that says something like "Connected with peer" or "Connection with peer successful."  If you do not see a similar message then the web page is not talking to the websocket server and your JS calls from/to Forms won't work.
 
 There are many other useful functions available.  Review the comments in the PLL and JS files for suggests.  Some of those functions offers way to check is a connection has been establish, if the server is running, etc.  This are helpful in order to make proper programmatic decisions about what to do next.
-
-http://www.fmatz.com/WS-final-13-01-_2018_11-28-47.png
 
 Here the demo movie: http://www.fmatz.com/Forms-WebSocket-Demo.gif
 
