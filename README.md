@@ -43,7 +43,6 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
     2.  Create a new form and attach websocketJSI.pll to your form.
     3.  Add object group from websocketJSI.olb per drag and copy
 
-
 ### Programming
 
 In the chk_websocket.fmb:
@@ -56,17 +55,17 @@ In the chk_websocket.fmb:
 In the chk-websocket.html:
 
 1. In the HTML page, add a reference to the needed JS file, the the file location is in /forms/java
-´´´javascript
+```js
     <script type="text/javascript" src="/forms/java/frmwebsocketjsi.js"></script>
-´´´
+```
 2. Add JS code to connect to the websocket server from the HTML page.  
-´´´javascript
+```js
     frmwebsocketjsi.connectToServer(8888);
-´´´
+```
 3. Add JS code to connect to the desired session from the HTML page.  Example:
-´´´javascript
+```js
     frmwebsocketjsi.beginSession('MyFxSession');
-´´´
+```
 See the functions behind the buttons in chk_websocket.fmb and chk-websocket.html
 
 ## Running the tests
@@ -84,37 +83,38 @@ This means you should not attempt to start the server and the session (in the fo
 
 In an ideal situation the expected flow would be something like this:
 
->1.  Start the chk_websocket.fmx:
-    - press 'Start Server'
-    - press 'Server State?'
-    - press 'Start Session'
-    - press 'Session State?'
-    - press 'Session ID?'
-    - If all ready here, then next: 
->3.  Open the chk-websocket.html:
-    - open in the Browser 'Development Tools' 'Console'
-    - press 'Connect Server' in the chk-websocket.html
-    - press 'Begin Session'
->4.  The web page session is started.
->5.  Interaction via JS can begin:
->6.  In the Form select in ComboBox:
-    - 'Alert' press 'Send JavaScript'
-    - 'Check Console' press 'Send JavaScript'
-    - 'Get Item' press 'Send JavaScript'
-    - 'Get Date> press 'Send JavaScript'
-    - 'Prompt' press 'Send JavaScript'
-    - 'Set Item' press 'Send JavaScript' 
->7.  Finishing the Websocket Service from chk_websocket.fmx:
-    - press 'Stop Session'
-    - press 'Stop Server'.
+1. Start the chk_websocket.fmx:
+   * press 'Start Server'
+   * press 'Server State?'
+   * press 'Start Session'
+   * press ' Session State?'
+   * press 'Session ID?'
+2. If all ready here, then next: 
+3. Open the chk-websocket.html:
+   * open in the Browser 'Development Tools' 'Console'
+   * press 'Connect Server' in the chk-websocket.html
+   * press 'Begin Session'
+4.  The web page session is started.
+5.  Interaction via JS can begin:
+6.  In the Form select in ComboBox:
+   * 'Alert' press 'Send JavaScript'
+   * 'Check Console' press 'Send JavaScript'
+   * 'Get Item' press 'Send JavaScript'
+   * 'Get Date> press 'Send JavaScript'
+   * 'Prompt' press 'Send JavaScript'
+   * 'Set Item' press 'Send JavaScript' 
+7.  Finishing the Websocket Service from chk_websocket.fmx:
+   * press 'Stop Session'
+   * press 'Stop Server'.
 
-You can check the availability of a Websocket Port: press 'Port Check' .
+You can check the availability of a Websocket Port: press 'Port Check'.
 
 If the web page session has been successfully established, you will see a message in the JS console (or shell) that says something like "Connected with peer" or "Connection with peer successful."  If you do not see a similar message then the web page is not talking to the websocket server and your JS calls from/to Forms won't work.
 
 There are many other useful functions available.  Review the comments in the PLL and JS files for suggests.  Some of those functions offers way to check is a connection has been establish, if the server is running, etc.  This are helpful in order to make proper programmatic decisions about what to do next.
 
-Here the demo movie: http://www.fmatz.com/Forms-WebSocket-Demo.gif
+Here the demo: 
+<img src="http://www.fmatz.com/WS-Forms-final.gif />
 
 ## Known issues
 
