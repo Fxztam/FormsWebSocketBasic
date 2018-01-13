@@ -8,7 +8,7 @@ this is a one-way peer to peer implementation: Forms calls exactly one JS client
 
 The Demo chk_websocket.fmb/chk-websocket.html tries to explain the basic functions with good transparency.
 
-### Forms test module started with fsal:
+### Forms test module started with Forms Stand-alone Application Launcher:
 
 <img src="http://www.fmatz.com/WS-final-13-01-_2018_11-28-47.png"/>
 
