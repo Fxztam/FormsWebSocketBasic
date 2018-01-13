@@ -122,25 +122,25 @@ Extraction of JS Code from chk-websocket.html:
 In order for this to work, the web page must be connected to the corresponding session.  This means you should not attempt to start the server and the session (in the form) then immediately attempt to do something.   In an ideal situation the expected flow would be something like this:
 
 1.  Start the chk_websocket.fmx:
-    a. press <Start Server>
-    b. press <Server State?>
-    c. press <Start Session>
-    d. press <Session State?>
-    e. press <Session ID?>
-    f. If all ready here, then next: 
+    - press 'Start Server'
+    - press 'Server State?'
+    - press 'Start Session'
+    - press 'Session State?'
+    - press 'Session ID?'
+    - If all ready here, then next: 
 3.  Open the chk-websocket.html:
-    a. open in the Browser <Development Tools> <Console>
-    a. press <Connect Server> in the chk-websocket.html
-    b. press <Begin Session>
+    - open in the Browser 'Development Tools' 'Console'
+    - press 'Connect Server' in the chk-websocket.html
+    - press 'Begin Session'
 4.  The web page session is started.
 5.  Interaction via JS can begin:
 6.  In the Form select in ComboBox:
-    a. <Alert> <Send JavaScript>
-    b. <Check Console> <Send JavaScript>
-    c. <Get Item> <Send JavaScript>
-    d. <Get Date> <Send JavaScript>
-    e. <Prompt> <Send JavaScript>
-    f. <Set Item> <Send JavaScript> .
+    - 'Alert' press 'Send JavaScript'
+    - 'Check Console' press 'Send JavaScript'
+    - 'Get Item' press 'Send JavaScript'
+    - 'Get Date> press 'Send JavaScript'
+    - 'Prompt' press 'Send JavaScript'
+    - 'Set Item' press 'Send JavaScript' .
 
 If the web page session has been successfully established, you will see a message in the JS console (or shell) that says something like "Connected with peer" or "Connection with peer successful."  If you do not see a similar message then the web page is not talking to the websocket server and your JS calls from/to Forms won't work.
 
