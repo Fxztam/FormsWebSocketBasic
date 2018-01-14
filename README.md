@@ -55,9 +55,10 @@ In the chk_websocket.fmb:
 3. Send/receive events/data in WHEN-BUTTON-PRESSED (BT_SEND_JS):
 <img src="http://www.fmatz.com/WS-PL-13-01-_2018_13-30-06.png" />
 
-In the chk-websocket.html:
+You can locate the chk-websocket.html in the /forms/java directory,
+some code lines in this source here:
 
-1. In the HTML page, add a reference to the needed JS file, the the file location is in /forms/java
+1. In the HTML page, add a reference to the needed JS file, the file location is in /forms/java
 ```js
     <script type="text/javascript" src="/forms/java/frmwebsocketjsi.js"></script>
 ```
@@ -69,7 +70,7 @@ In the chk-websocket.html:
 ```js
     frmwebsocketjsi.beginSession('MyFxSession');
 ```
-See the functions behind the buttons in chk_websocket.fmb and chk-websocket.html
+See further the functions behind the buttons in chk_websocket.fmb and chk-websocket.html.
 
 ## Running the tests
 
