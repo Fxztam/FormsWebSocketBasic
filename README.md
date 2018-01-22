@@ -29,6 +29,12 @@ This Oracle Forms Demo was inspired from:
 
 Following subsequent setups are from: https://community.oracle.com/message/14655456#14655456
 
+#### Get and Set a free Websocket port
+
+1. Select a free port for Websocket
+2. In chk_websocket.fmb : Set the PARAMETER.P_PORT=<your-free-port>
+3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer<your-free-port>);" 
+
 #### Environment setup goes something like this:
 
     1. Download : jetty.jarhttp://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar  (from the Deployment Guide).
@@ -39,12 +45,15 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
     6. Config in the formsweb.cfg:
        * enableJavascriptEvent=true
        * JavaScriptBlocksHeartBeat=true
+    7. Place chk-websocket.html in /forms/java directory for starting:
+       http://<your-forms-host>:<your-forms-port>/forms/java/chk-websocket.html
 
 #### Application setup:
 
     1.  Compile websocketJSI.pll in /forms directory and save websocketJSI.plx there
     2.  Create a new form and attach websocketJSI.pll to your form.
     3.  Add object group from websocketJSI.olb per drag and copy
+    4.  Be sure you have defined <your-free-port> in chk_websocket.fmb and chk-websocket.html
 
 ### Programming
 
@@ -55,7 +64,7 @@ In the chk_websocket.fmb:
 3. Send/receive events/data in WHEN-BUTTON-PRESSED (BT_SEND_JS):
 <img src="http://www.fmatz.com/WS-PL-13-01-_2018_13-30-06.png" />
 
-You can locate the chk-websocket.html in the /forms/java directory,
+You have located the chk-websocket.html in the /forms/java directory,
 some code lines in this source here:
 
 1. In the HTML page, add a reference to the needed JS file, the file location is in /forms/java
