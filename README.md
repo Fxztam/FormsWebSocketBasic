@@ -16,17 +16,17 @@ The Demo chk_websocket.fmb/chk-websocket.html tries to explain the basic functio
 This Oracle Forms Demo was inspired from: 
 - https://docs.oracle.com/middleware/12213/formsandreports/deploy-forms/oracle-forms-and-javascript-integration.htm#FSDEP242
 - https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=535584723136940&parent=DOCUMENT&sourceId=854157.1&id=853911.1&_afrWindowMode=0&_adf.ctrl-state=p5qvbw888_102
-- https://community.oracle.com/message/14655253#14655253 
+- https://community.oracle.com/message/14655253#14655253
 
 ### Prerequisites
 
 - Oracle Forms 12.2.1.3
 - Jetty WebSocket server 
-- check enabled WebSocket in your Web Browser : *`https://websocket.org/echo.html`*
+- check enabled WebSocket in your Web Browser : https://websocket.org/echo.html
 
 ### Setup and Deployment
 
-Following subsequent setups are from: *`https://community.oracle.com/message/14655456#14655456`*
+Following subsequent setups are from: https://community.oracle.com/message/14655456#14655456
 
 #### Get and Set a free Websocket port
 
@@ -36,7 +36,9 @@ Following subsequent setups are from: *`https://community.oracle.com/message/146
 
 #### Environment setup goes something like this
 
-    1. Download : jetty.jar from :   `http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar`  (from the Deployment Guide).
+    1. Download : jetty.jar from :
+       http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar
+       (from the Deployment Guide).
     2. Properly sign the jar.
     3. Copy the jar to the /forms/java directory.
     4. Add the jar file to ARCHIVE (or extensions.jnlp if using Web Start).
@@ -44,12 +46,12 @@ Following subsequent setups are from: *`https://community.oracle.com/message/146
     6. Config in the formsweb.cfg:
        * enableJavascriptEvent=true
        * JavaScriptBlocksHeartBeat=true
-    7. Place *`chk-websocket.html`* in /forms/java directory for starting:
+    7. Place chk-websocket.html in /forms/java directory for starting:
        `http://<your-forms-host>:<your-forms-port>/forms/java/chk-websocket.html`
 
 #### Application setup
 
-    1.  Compile *`websocketJSI.pll in the forms directory and save websocketJSI.plx there
+    1.  Compile websocketJSI.pll in the forms directory and save websocketJSI.plx there
     2.  Create a new form and attach websocketJSI.pll to your form.
     3.  Add object group from websocketJSI.olb per drag and copy
     4.  Be sure you have defined your free port in chk_websocket.fmb and chk-websocket.html
@@ -72,7 +74,7 @@ some code lines from this source here:
 ```
 2. Add JS code to connect to the websocket server from the HTML page.  
 ```js
-    frmwebsocketjsi.connectToServer(8888);
+    frmwebsocketjsi.connectToServer(7778);
 ```
 3. Add JS code to connect to the desired session from the HTML page.  Example:
 ```js
@@ -82,9 +84,9 @@ See further the functions behind the buttons in chk_websocket.fmb and chk-websoc
 
 ## Running the tests
 
-The WJSI fetures in this demo were tested on the IE11 Java plugin and the Forms Application Launcher, based on Java Version 1.8_151.
+The WJSI fetures in this demo were tested on the IE11 Java plugin and the Forms Application Launcher, based on Java Version 1.8_161.
 
-### Start with Forms Stand-alone Application Launcher (FSAL) 
+### Start with Forms Stand-alone Application Launcher (FSAL)
 
 The cmd file for starting with FSAL: https://github.com/Fxztam/FormsWebSocketBasic/blob/master/start_websocket-demo.cmd
 
@@ -118,7 +120,7 @@ You can check the availability of a Websocket Port: press 'Port Check'.
 
 Here the demo: 
 
-<img src="http://www.fmatz.com/WS-Forms-final.gif" />
+<img src="http://www.fmatz.com/WS-Forms-final.gif"/>
 
 ## Known issues
 
