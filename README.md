@@ -36,7 +36,7 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
 
 #### Environment setup goes something like this
 
-    1. Download : jetty.jar from :
+    1. Download the Jetty server from :
        http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar
        (from the Deployment Guide).
     2. Properly sign the jar.
