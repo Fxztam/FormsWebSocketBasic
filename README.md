@@ -60,8 +60,8 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
 
 In the chk_websocket.fmb:
 
-1. Start server : websocketJSI.StartServer(8888);
-2. Start session: websocketJSI.BeginSession(8888, 'MyFxSession');
+1. Start server : websocketJSI.StartServer(7778);
+2. Start session: websocketJSI.BeginSession(7778, 'MyFxSession');
 3. Send/receive events/data in WHEN-BUTTON-PRESSED (BT_SEND_JS):
 <img src="http://www.fmatz.com/WS-PL-13-01-_2018_13-30-06.png" />
 
