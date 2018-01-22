@@ -22,21 +22,21 @@ This Oracle Forms Demo was inspired from:
 
 - Oracle Forms 12.2.1.3
 - Jetty WebSocket server 
-- check enabled WebSocket in your Web Browser : https://websocket.org/echo.html 
+- check enabled WebSocket in your Web Browser : *`https://websocket.org/echo.html`*
 
 ### Setup and Deployment
 
-Following subsequent setups are from: https://community.oracle.com/message/14655456#14655456
+Following subsequent setups are from: *`https://community.oracle.com/message/14655456#14655456`*
 
 #### Get and Set a free Websocket port
 
 1. Select a free port for Websocket
-2. In chk_websocket.fmb : Set the PARAMETER.P_PORT=\<your-free-port>
-3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer(\<your-free-port>);" 
+2. In chk_websocket.fmb : Set the *`PARAMETER.P_PORT=\<your-free-port>`*
+3. In chk-websocket.html: Find & set *`"frmwebsocketjsi.connectToServer(\<your-free-port>);"`*
 
-#### Environment setup goes something like this:
+#### Environment setup goes something like this
 
-    1. Download : jetty.jarhttp://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar  (from the Deployment Guide).
+    1. Download : jetty.jar from :   `http://central.maven.org/maven2/org/eclipse/jetty/aggregate/jetty-all/9.4.5.v20170502/jetty-all-9.4.5.v20170502-uber.jar`  (from the Deployment Guide).
     2. Properly sign the jar.
     3. Copy the jar to the /forms/java directory.
     4. Add the jar file to ARCHIVE (or extensions.jnlp if using Web Start).
@@ -44,15 +44,15 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
     6. Config in the formsweb.cfg:
        * enableJavascriptEvent=true
        * JavaScriptBlocksHeartBeat=true
-    7. Place chk-websocket.html in /forms/java directory for starting:
-       http://<your-forms-host>:<your-forms-port>/forms/java/chk-websocket.html
+    7. Place *`chk-websocket.html`* in /forms/java directory for starting:
+       `http://<your-forms-host>:<your-forms-port>/forms/java/chk-websocket.html`
 
-#### Application setup:
+#### Application setup
 
-    1.  Compile websocketJSI.pll in /forms directory and save websocketJSI.plx there
+    1.  Compile *`websocketJSI.pll in the forms directory and save websocketJSI.plx there
     2.  Create a new form and attach websocketJSI.pll to your form.
     3.  Add object group from websocketJSI.olb per drag and copy
-    4.  Be sure you have defined <your-free-port> in chk_websocket.fmb and chk-websocket.html
+    4.  Be sure you have defined your free port in chk_websocket.fmb and chk-websocket.html
 
 ### Programming
 
