@@ -32,7 +32,7 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
 
 1. Select a free port for Websocket
 2. In chk_websocket.fmb : Set the PARAMETER.P_PORT=\<your-free-port>
-3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer\<your-free-port>);" 
+3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer(\<your-free-port>);" 
 
 #### Environment setup goes something like this:
 
