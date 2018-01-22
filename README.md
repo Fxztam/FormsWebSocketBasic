@@ -3,8 +3,7 @@
 Websockets is a two-way extremely powerful communication protocol,
 you can find here a very good summary from Oracle: http://www.oracle.com/technetwork/cn/community/developer-day/6-java-html5websocket-app-2196804-zhs.pdf
 
-The Oracle Forms 12.2.1.3 new feature 'Websocket JS Interface' - WJSI - allows the connection to a Web Browser session for sending events/data or synchronous receiving data per JS function call,  
-this is a one-way peer-to-peer implementation: Forms calls exactly one JS client point.
+The Oracle Forms 12.2.1.3 new feature 'Websocket JS Interface' - WJSI - allows the connection to a Web Browser session for sending events/data or synchronous receiving data per JS function call, this is a one-way peer-to-peer implementation: Forms calls exactly one JS client point.
 
 The Demo chk_websocket.fmb/chk-websocket.html tries to explain the basic functions with good transparency.
 
@@ -32,8 +31,8 @@ Following subsequent setups are from: https://community.oracle.com/message/14655
 #### Get and Set a free Websocket port
 
 1. Select a free port for Websocket
-2. In chk_websocket.fmb : Set the PARAMETER.P_PORT=<your-free-port>
-3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer<your-free-port>);" 
+2. In chk_websocket.fmb : Set the PARAMETER.P_PORT=\<your-free-port>
+3. In chk-websocket.html: Find & set "frmwebsocketjsi.connectToServer\<your-free-port>);" 
 
 #### Environment setup goes something like this:
 
@@ -65,7 +64,7 @@ In the chk_websocket.fmb:
 <img src="http://www.fmatz.com/WS-PL-13-01-_2018_13-30-06.png" />
 
 You have located the chk-websocket.html in the /forms/java directory,
-some code lines in this source here:
+some code lines from this source here:
 
 1. In the HTML page, add a reference to the needed JS file, the file location is in /forms/java
 ```js
