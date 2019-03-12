@@ -120,7 +120,7 @@ You can check the availability of a Websocket Port: press 'Port Check'.
 
 Here the demo: 
 
-<img src="http://www.fmatz.com/WS-Forms-final.gif"/>
+<img src="http://www.fmatz.com/WS-Forms-final.gif" />
 
 ( Try this link "www.fmatz.com/WS-Forms-final.gif" for the full movie. )
 
