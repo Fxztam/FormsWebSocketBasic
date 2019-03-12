@@ -122,6 +122,8 @@ Here the demo:
 
 <img src="http://www.fmatz.com/WS-Forms-final.gif"/>
 
+( Try this link "www.fmatz.com/WS-Forms-final.gif" for the full movie. )
+
 ## Known issues
 
 The flow above is important, errors due to deviations from the flow must be remedied by restarting.
